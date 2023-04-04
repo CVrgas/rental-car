@@ -1,0 +1,26 @@
+.container{
+}
+.banner{
+    z-index: -1;
+    display: flex;
+
+}
+.banner img{
+    width: 50%;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.container h2{
+    background-color: transparent;
+    font-size: 50px;
+    font-weight: 800;
+}
+.container p{
+    text-align: center;
+    background-color: transparent;
+    font-size: 25px;
+} 

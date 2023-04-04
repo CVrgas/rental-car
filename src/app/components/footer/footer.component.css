@@ -1,0 +1,35 @@
+.footer{   
+    width: 100%;
+    padding: 20px 0;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    color: white;
+    justify-content: space-around;
+    display: flex;
+    background-color: black;
+}
+.footer h1{
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.subscribe{
+    display: flex;
+    justify-content: space-evenly;
+}
+.subscribe input, button{
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+}
+.subscribe button{
+    border: none;
+    background-color: white;
+}
+.subscribe button:hover{
+    background-color: orange;
+}

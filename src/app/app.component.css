@@ -1,0 +1,13 @@
+.container app-navbar {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.container router-outlet{
+    position: relative;
+}
+.container app-footer{
+    bottom: 0;
+}
