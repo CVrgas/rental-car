@@ -4,28 +4,29 @@
         <div class="car-type">
             <label for="">Select your car</label>
             <!-- <input type="search" name="" id=""> -->
-            <select name="cars" id="cars">
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+            <select name="cars" id="cars" >
+                <option *ngFor="let car of available_cars" value="">{{car.Model}} {{car.Mark}}</option>
             </select>
         </div>
         <div class="car-type">
             <label for="">Pick-up location</label>
-            <input type="text" name="" id="">
+            <select>
+                <option *ngFor="let city of available_citys" value="">{{city}}</option>
+            </select>
         </div>
         <div class="car-type">
             <label for="">Drop-of location</label>
-            <input type="text" name="" id="">
+            <select>
+                <option *ngFor="let city of available_citys" value="">{{city}}</option>
+            </select>
         </div>
         <div class="car-type">
-            <label for="">Pick-up Date</label>
-            <input type="date" name="" id="">
+            <label for="">Pick up date</label>
+            <input type="date" name="" id="Pick-up" min="{{today_date | date: 'yyyy-MM-dd'}}" (change)="min_drop()">
         </div>
         <div class="car-type">
             <label for="">Drop-of Date</label>
-            <input type="date" name="" id="">
+            <input type="date" name="" id="Drop-of" min="{{drop_date | date: 'yyyy-MM-dd'}}">
         </div>
         <div>
             <button class="search">Book</button>
