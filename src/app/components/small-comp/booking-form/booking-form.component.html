@@ -3,7 +3,6 @@
     <form class="booking-form">
         <div class="car-type">
             <label for="">Select your car</label>
-            <!-- <input type="search" name="" id=""> -->
             <select name="cars" id="cars" >
                 <option *ngFor="let car of available_cars" value="">{{car.Model}} {{car.Mark}}</option>
             </select>

@@ -66,6 +66,7 @@ export class BookingFormComponent implements OnInit {
   ]
   today_date: Date = new Date;
   drop_date: Date = new Date;
+
   min_drop(){
     const pickup_date = <HTMLInputElement>document.getElementById('Pick-up')
     const Dropof_date = <HTMLInputElement>document.getElementById('Drop-of')
@@ -73,9 +74,7 @@ export class BookingFormComponent implements OnInit {
     console.log(pickup_date.value)
     let _date: Date = new Date(pickup_date.value)
     Dropof_date.setAttribute("min", 
-    `${_date.getFullYear()}
-    -${("0" + (_date.getMonth() + 1)).slice(-2)}
-    -${("0" + (_date.getDate() + 2)).slice(-2)}
+    `${_date.getFullYear()}-${("0" + (_date.getMonth() + 1)).slice(-2)}-${("0" + (_date.getDate() + 2)).slice(-2)}
     `)
   }
 }

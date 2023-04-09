@@ -1,0 +1,69 @@
+.container{
+    width: 100%;
+    height: 90vh;
+    place-items: center;
+    box-sizing: border-box;
+    display: grid;
+    background-color: transparent;
+    padding: 0 0 50px 0;
+    overflow: hidden;
+    gap: 10px;
+    
+}
+.models{
+    width: 100%;
+    height: 80%;
+}
+.header{
+    width: 100%;
+    place-self: start;
+}
+.header h1{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.header p{
+    color: rgb(161, 161, 161);
+}
+.header hr{
+    width: 100%;
+    border: solid black;
+    border-width: 0 0 1px 0;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.card{
+    margin: auto;
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.card img{
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+}
+.card-body{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+.card:hover img{
+    animation: 1s grow forwards;
+}
+@keyframes grow {
+    to{
+        transform: scale(1.5);
+    }
+    
+}

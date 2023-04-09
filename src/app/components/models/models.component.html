@@ -1,1 +1,22 @@
-<p>models works!</p>
+<div class="container">
+    <div class="models">
+        <div class="header">
+            <h1>Available car models</h1>
+            <p>Home / Models</p>
+            <hr>
+        </div>
+        <div class="card-container">
+            <div class="card" *ngFor="let car of available_cars">
+                <img src="https://media.istockphoto.com/id/1221468639/vector/abstract-white-background-geometric-texture.jpg?s=612x612&w=0&k=20&c=Y556Rao4a4bnaBx_EX1ZGGseGwLeIzzJJA52qj0I4dc=" alt="">
+                <div class="card-body">
+                    <h1>{{car.Model}} {{car.Mark}}</h1>
+                    <div class="details">
+                        <p><i class="fa-solid fa-user"></i> {{car.Doors}}</p>
+                        <p><i class="fa-solid fa-worm"></i> {{car.Transmission}}</p>
+                        <p><i class="fa-solid fa-calendar"></i> {{car.Year}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

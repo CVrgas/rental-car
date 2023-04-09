@@ -1,0 +1,61 @@
+.container{
+    width: 100%;
+    height: 90vh;
+    place-items: center;
+    box-sizing: border-box;
+    display: grid;
+    background-color: transparent;
+    padding: 0 0 50px 0;
+    overflow: hidden;
+    gap: 10px;
+}
+.box{
+    height: 80%;
+    width: 100%;
+}
+.header h1{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.header p{
+    color: rgb(161, 161, 161);
+}
+.header hr{
+    width: 100%;
+    border: solid black;
+    border-width: 0 0 1px 0;
+}
+.Infor hr{
+    margin: 20px;
+    border: solid black;
+    border-width: 0px 1px;
+}
+
+.Infor{
+    /* border: 1px solid lime; */
+    place-self: center;
+    display: flex;
+}
+.image{
+    /* border: 1px solid lime; */
+    max-width: 50%;
+    overflow: hidden;
+}
+.image img{
+    border-radius: 15px;
+    width: 100%;
+}
+.paragraph{
+    /* border: 1px solid lime; */
+    align-self: center;
+    align-content: center;
+}
+.image img:hover{
+    animation: 1s grow forwards;
+}
+@keyframes grow {
+    to{
+        transform: scale(1.5);
+    }
+    
+}
