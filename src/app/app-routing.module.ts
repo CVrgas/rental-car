@@ -5,7 +5,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { ModelsComponent } from './components/models/models.component';
 import { TeamComponent } from './components/team/team.component';
-import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { ReserveComponent } from './components/reserve/reserve.component';
 
 const routes: Routes = [
   {
@@ -25,8 +25,8 @@ const routes: Routes = [
     component: ModelsComponent
   },
   {
-    path: 'Testimonials',
-    component: TestimonialsComponent
+    path: 'Reserve',
+    component: ReserveComponent
   },
   {
     path: 'Team',

@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="box">
+        <div class="header">
+            <h1>make a Reservetion</h1>
+            <p>Home / Reservation</p>
+        </div>
+        <hr>
+        <div class="reservation">
+            <h1>Start Reservation</h1>
+            <form action="">
+                <div class="drop_pick">
+                    <input type="text" placeholder="Pick up location" class="location">
+                    <input class="location" type="text" placeholder="Drop off location" *ngIf="reserver_form.different_return">
+                    <div class="date_input">
+                        <h4>Pick Up date:</h4>
+                        <div>
+                            <input type="date" id="PickDate">
+                            <input type="time">
+                        </div>
+                        <h4>Drop Off date:</h4>
+                        <div>
+                            <input type="date" id="DropDate">
+                            <input type="time">
+                        </div>
+                        <div class="checkbox">
+                            <label for="">Different return location?</label>
+                            <input type="checkbox" name="return" id="return" [(ngModel)]="reserver_form.different_return">
+                        </div>
+                    </div>
+                </div>          
+                <div class="driver_info">
+                    <input type="text" placeholder="Recidency">
+                    <input type="text" placeholder="Coupon">
+                    <div class="select_age">
+                        <label for="">Age: </label>
+                        <select name="" id="">
+                            <option value="18">18</option>
+                            <option value="18">19</option>
+                            <option value="18">20</option>
+                            <option value="18">21</option>
+                            <option value="18">22</option>
+                            <option value="18">23</option>
+                            <option value="18">24</option>
+                            <option value="18">25</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button">
+                    <button type="submit"> Select Car</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
