@@ -4,19 +4,19 @@
         <div class="car-type">
             <label for="">Select your car</label>
             <select name="cars" id="cars" >
-                <option *ngFor="let car of available_cars" value="">{{car.Model}} {{car.Mark}}</option>
+                <option *ngFor="let car of cars" value="">{{car.Brand}} {{car.Model}}</option>
             </select>
         </div>
         <div class="car-type">
             <label for="">Pick-up location</label>
             <select>
-                <option *ngFor="let city of available_citys" value="">{{city}}</option>
+                <option *ngFor="let city of cities" value="">{{city}}</option>
             </select>
         </div>
         <div class="car-type">
             <label for="">Drop-of location</label>
             <select>
-                <option *ngFor="let city of available_citys" value="">{{city}}</option>
+                <option *ngFor="let city of cities" value="">{{city}}</option>
             </select>
         </div>
         <div class="car-type">

@@ -1,6 +1,7 @@
-export interface Car {
+export interface Vehicle {
+    Brand: string,
     Model: string,
-    Mark: string,
+    type: string,
     Year: number,
     Doors: number,
     AC: boolean,

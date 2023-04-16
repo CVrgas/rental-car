@@ -7,9 +7,9 @@
         </div>
         <div class="card-container">
             <div class="card" *ngFor="let car of available_cars">
-                <img src="https://media.istockphoto.com/id/1221468639/vector/abstract-white-background-geometric-texture.jpg?s=612x612&w=0&k=20&c=Y556Rao4a4bnaBx_EX1ZGGseGwLeIzzJJA52qj0I4dc=" alt="">
+                <img src="/assets/cars/{{car.Brand}}{{car.Model}}.jpg" alt="">
                 <div class="card-body">
-                    <h1>{{car.Model}} {{car.Mark}}</h1>
+                    <h1>{{car.Brand}} {{car.Model}}</h1>
                     <div class="details">
                         <p><i class="fa-solid fa-user"></i> {{car.Doors}}</p>
                         <p><i class="fa-solid fa-worm"></i> {{car.Transmission}}</p>

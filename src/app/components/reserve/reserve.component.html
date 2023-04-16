@@ -46,9 +46,19 @@
                     </div>
                 </div>
                 <div class="button">
-                    <button type="submit"> Select Car</button>
+                    <button type="submit" (click)="select_car()"> Select Car</button>
                 </div>
             </form>
+            <div class="car_list" *ngIf="reserver_form.selecting_car" >
+                <div class="car_card" *ngFor="let car of cars">
+                    <img src="assets/cars/{{car.Brand}}{{car.Model}}.jpg" alt="">
+                    <div>
+                        <p>{{car.Brand}}</p>
+                        <p>{{car.Model}}</p>
+                        <p>{{car.Year}}</p>
+                    </div>
+                </div>            
+            </div>
         </div>
     </div>
 </div>

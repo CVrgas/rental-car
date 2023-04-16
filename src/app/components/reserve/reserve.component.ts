@@ -1,4 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Vehicle } from 'src/app/Models/car';
+import { LocalService } from 'src/app/Services/LocalService';
 
 @Component({
   selector: 'app-reserve',
@@ -6,6 +8,9 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   styleUrls: ['./reserve.component.css']
 })
 export class ReserveComponent implements OnInit, AfterViewInit{
+
+  constructor(private service: LocalService){}
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       const _new = new Date
@@ -14,21 +19,27 @@ export class ReserveComponent implements OnInit, AfterViewInit{
     })
   }
   ngOnInit(): void {
-
+    this.cars =this.service.getCars()
   }
-  isVisible = false
+  cars: Vehicle[];
+  Show_dropOff = false
   reserver_form = {
     different_return: false,
     dates: {
       date_min: new Date,
       time_min: new Date,
       time_max: new Date
-    }
-
+    },
+    selecting_car: false
   }
-  show(){
-    this.isVisible = !this.isVisible
-    console.log(this.isVisible)
+  
+
+
+  show_dropOff(){
+    this.Show_dropOff = !this.Show_dropOff
+  }
+  select_car(){
+    this.reserver_form.selecting_car = !this.reserver_form.selecting_car
   }
   date_minValue(element_id: string, new_value: string){
     const element = <HTMLInputElement>document.getElementById(element_id);

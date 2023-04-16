@@ -1,17 +1,12 @@
 .container{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     place-items: center;
-    box-sizing: border-box;
-    display: grid;
     background-color: transparent;
+    margin-top: 150px;
     padding: 0 0 50px 0;
     overflow: hidden;
     gap: 10px;
-}
-.box{
-    height: 80%;
-    width: 100%;
 }
 .header h1{
     letter-spacing: 1px;
@@ -20,7 +15,7 @@
 .header p{
     color: rgb(161, 161, 161);
 }
-.box hr{
+.car_card hr{
     width: 100%;
     border: solid black;
     border-width: 0 0 1px 0;
@@ -116,4 +111,50 @@
 }
 .button button:hover{
     background-color: rgb(32, 32, 32);
+}
+.car_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 50px;
+    padding: 2%;
+    overflow: hidden;
+    /* animation: 1s appear forwards; */
+}
+.car_card{
+    max-width: 300px;
+    max-height: 300px;
+    overflow:hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow:  6px 6px 16px #666666, -6px -6px 16px #ffffff;
+    cursor: pointer;
+    animation: 1s appear forwards;
+}
+.car_card img{
+    width: 100%;
+    object-fit: contain;
+}
+.car_card div{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.car_card:hover img{
+    animation: 1s grow forwards;
+}
+@keyframes grow {
+    to{
+        transform: scale(1.20);
+    }
+}
+@keyframes appear {
+    from { opacity: 0;}
+    to { opacity: 1;}
 }
